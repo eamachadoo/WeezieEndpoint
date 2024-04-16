@@ -32,3 +32,4 @@ Route::apiResource('cables', 'App\Http\Controllers\Api\CableController');
 
 Route::apiResource('closures', 'App\Http\Controllers\Api\ClosureController');
 
+Route::apiResource('closure_zones', 'App\Http\Controllers\Api\ClosureZoneController');
