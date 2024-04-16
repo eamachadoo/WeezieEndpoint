@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Of_tabController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,9 +20,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/oftabs', 'App\Http\Controllers\Of_tabController@index');
+Route::apiResource('endpoints', 'App\Http\Controllers\Api\EndpointController');
 
-Route::get('/oftabs/{id}', 'App\Http\Controllers\Of_tabController@show');
-
-Route::post('/oftabs', 'App\Http\Controllers\Of_tabController@store');
 
