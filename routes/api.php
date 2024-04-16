@@ -23,3 +23,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::apiResource('endpoints', 'App\Http\Controllers\Api\EndpointController');
 
 Route::apiResource('annotation_points', 'App\Http\Controllers\Api\AnnotationPointController');
+
+Route::apiResource('annotation_zones', 'App\Http\Controllers\Api\AnnotationZoneController');
