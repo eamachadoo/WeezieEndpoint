@@ -29,3 +29,6 @@ Route::apiResource('annotation_zones', 'App\Http\Controllers\Api\AnnotationZoneC
 Route::apiResource('buildings', 'App\Http\Controllers\Api\BuildingController');
 
 Route::apiResource('cables', 'App\Http\Controllers\Api\CableController');
+
+Route::apiResource('closures', 'App\Http\Controllers\Api\ClosureController');
+
