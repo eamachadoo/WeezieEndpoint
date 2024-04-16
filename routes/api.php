@@ -39,3 +39,5 @@ Route::apiResource('fdp_zones', 'App\Http\Controllers\Api\FdpZoneController');
 Route::apiResource('ftb_zones', 'App\Http\Controllers\Api\FtbZoneController');
 
 Route::apiResource('olt_zones', 'App\Http\Controllers\Api\OltZoneController');
+
+Route::apiResource('pathways', 'App\Http\Controllers\Api\PathwayController');
