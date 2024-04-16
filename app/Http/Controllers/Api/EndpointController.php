@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Controllers\Api;
-
+use App\Models\Endpoint;
 use App\Http\Controllers\Controller;
+use App\Http\Resources\EndpointResource;
 use Illuminate\Http\Request;
 
 class EndpointController extends Controller
@@ -12,7 +13,7 @@ class EndpointController extends Controller
      */
     public function index()
     {
-        //
+        return EndpointResource::collection(Endpoint::all());
     }
 
     /**
@@ -47,3 +48,5 @@ class EndpointController extends Controller
         //
     }
 }
+?>
+
