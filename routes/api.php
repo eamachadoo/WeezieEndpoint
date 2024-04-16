@@ -25,3 +25,7 @@ Route::apiResource('endpoints', 'App\Http\Controllers\Api\EndpointController');
 Route::apiResource('annotation_points', 'App\Http\Controllers\Api\AnnotationPointController');
 
 Route::apiResource('annotation_zones', 'App\Http\Controllers\Api\AnnotationZoneController');
+
+Route::apiResource('buildings', 'App\Http\Controllers\Api\BuildingController');
+
+Route::apiResource('cables', 'App\Http\Controllers\Api\CableController');
