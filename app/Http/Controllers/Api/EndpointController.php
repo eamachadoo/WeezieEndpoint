@@ -13,7 +13,8 @@ class EndpointController extends Controller
      */
     public function index()
     {
-        return EndpointResource::collection(Endpoint::all());
+        $endpoints = Endpoint::orderBy('id', 'asc')->get();
+        return EndpointResource::collection($endpoints);
     }
 
     /**
@@ -29,7 +30,8 @@ class EndpointController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $endpoint = Endpoint::findOrFail($id);
+        return new EndpointResource($endpoint);
     }
 
     /**
