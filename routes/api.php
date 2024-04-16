@@ -35,3 +35,5 @@ Route::apiResource('closures', 'App\Http\Controllers\Api\ClosureController');
 Route::apiResource('closure_zones', 'App\Http\Controllers\Api\ClosureZoneController');
 
 Route::apiResource('fdp_zones', 'App\Http\Controllers\Api\FdpZoneController');
+
+Route::apiResource('ftb_zones', 'App\Http\Controllers\Api\FtbZoneController');
