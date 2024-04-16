@@ -41,3 +41,5 @@ Route::apiResource('ftb_zones', 'App\Http\Controllers\Api\FtbZoneController');
 Route::apiResource('olt_zones', 'App\Http\Controllers\Api\OltZoneController');
 
 Route::apiResource('pathways', 'App\Http\Controllers\Api\PathwayController');
+
+Route::apiResource('fc_sites', 'App\Http\Controllers\Api\SiteController');
