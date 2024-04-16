@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Endpoint extends Model
 {
     use HasFactory;
+
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+    protected $table = 'of_tab';
 }
