@@ -43,3 +43,5 @@ Route::apiResource('olt_zones', 'App\Http\Controllers\Api\OltZoneController');
 Route::apiResource('pathways', 'App\Http\Controllers\Api\PathwayController');
 
 Route::apiResource('fc_sites', 'App\Http\Controllers\Api\SiteController');
+
+Route::apiResource('technical_locals', 'App\Http\Controllers\Api\TechnicalLocalController');
