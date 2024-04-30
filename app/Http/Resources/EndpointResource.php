@@ -12,8 +12,13 @@ class EndpointResource extends JsonResource
      *
      * @return array<string, mixed>
      */
-    public function toArray(Request $request): array
-    {
-        return parent::toArray($request);
-    }
+    public function toArray($request)
+{
+    if (is_array($this->resource)) {
+        // If the resource is an array (of headers), return it as is
+        return [
+            'data' => $this->resource,
+        ];
+    } 
+}
 }

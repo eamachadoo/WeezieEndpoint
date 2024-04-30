@@ -14,5 +14,16 @@ class AnnotationPoint extends Model
      *
      * @var string
      */
-    protected $table = 'fc_annotation_point';
+    protected $table;
+
+    public function __construct(array $attributes = [], string $table = null)
+    {
+        parent::__construct($attributes);
+
+        if ($table) {
+            $this->table = $table;
+        } else {
+            $this->table = 'fc_annotation_point';
+        }
+    }
 }

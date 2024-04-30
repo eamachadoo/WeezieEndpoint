@@ -24,24 +24,3 @@ Route::apiResource('endpoints', 'App\Http\Controllers\Api\EndpointController');
 
 Route::apiResource('annotation_points', 'App\Http\Controllers\Api\AnnotationPointController');
 
-Route::apiResource('annotation_zones', 'App\Http\Controllers\Api\AnnotationZoneController');
-
-Route::apiResource('buildings', 'App\Http\Controllers\Api\BuildingController');
-
-Route::apiResource('cables', 'App\Http\Controllers\Api\CableController');
-
-Route::apiResource('closures', 'App\Http\Controllers\Api\ClosureController');
-
-Route::apiResource('closure_zones', 'App\Http\Controllers\Api\ClosureZoneController');
-
-Route::apiResource('fdp_zones', 'App\Http\Controllers\Api\FdpZoneController');
-
-Route::apiResource('ftb_zones', 'App\Http\Controllers\Api\FtbZoneController');
-
-Route::apiResource('olt_zones', 'App\Http\Controllers\Api\OltZoneController');
-
-Route::apiResource('pathways', 'App\Http\Controllers\Api\PathwayController');
-
-Route::apiResource('fc_sites', 'App\Http\Controllers\Api\SiteController');
-
-Route::apiResource('technical_locals', 'App\Http\Controllers\Api\TechnicalLocalController');
