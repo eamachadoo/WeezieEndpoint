@@ -16,7 +16,7 @@ class AnnotationPointController extends Controller
 
     public function index(Request $request)
     {
-        $table = $request->input('tableName', (new AnnotationPoint)->getTable());
+        $table = $request->header('tableName', (new AnnotationPoint)->getTable());
 
         $query = "
             SELECT
@@ -48,6 +48,12 @@ class AnnotationPointController extends Controller
         return new EndpointResource($tableStructure);
     }
 
+    public function getLayers()
+    {
+        $tables = DB::select('SELECT table_name FROM information_schema.tables WHERE table_schema = \'public\'');
+        return new EndpointResource($tables);
+    }
+
     /**
      * Store a newly created resource in storage.
      */
@@ -59,11 +65,19 @@ class AnnotationPointController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $anp_id)
+
+     //editar o show para retornar os campos de forma correta
+    public function show($tableName)
     {
-        $annotationPoint = AnnotationPoint::findOrFail($anp_id);
-        return new EndpointResource($annotationPoint);
+        $table = $tableName;
+
+        
+        $columns = DB::select("SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = '{$table}'");
+
+
+        return new EndpointResource($columns);
     }
+
 
     /**
      * Update the specified resource in storage.

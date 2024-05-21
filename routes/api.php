@@ -24,3 +24,7 @@ Route::apiResource('endpoints', 'App\Http\Controllers\Api\EndpointController');
 
 Route::apiResource('annotation_points', 'App\Http\Controllers\Api\AnnotationPointController');
 
+Route::get('/layers', 'App\Http\Controllers\Api\AnnotationPointController@getLayers');
+
+Route::get('/api/annotation_points/{tableName}', 'AnnotationPointController@show');
+

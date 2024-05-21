@@ -22,8 +22,6 @@ class AnnotationPoint extends Model
 
         if ($table) {
             $this->table = $table;
-        } else {
-            $this->table = 'fc_annotation_point';
-        }
+        } 
     }
 }
