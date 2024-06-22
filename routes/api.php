@@ -1,10 +1,7 @@
 <?php
-
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Of_tabController;
-
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -15,16 +12,11 @@ use App\Http\Controllers\Of_tabController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-
 Route::apiResource('endpoints', 'App\Http\Controllers\Api\EndpointController');
-
-Route::apiResource('annotation_points', 'App\Http\Controllers\Api\AnnotationPointController');
-
-Route::get('/layers', 'App\Http\Controllers\Api\AnnotationPointController@getLayers');
-
-Route::get('/api/annotation_points/{tableName}', 'AnnotationPointController@show');
-
+Route::apiResource('endpoints', 'App\Http\Controllers\Api\EndpointController');
+Route::get('/layers', 'App\Http\Controllers\Api\EndpointController@getLayers');
+Route::get('/api/endpoints/{tableName}', 'EndpointController@show');
+Route::get('/layerAttributes/{tableName}', 'App\Http\Controllers\Api\EndpointController@getLayerAttributes');
